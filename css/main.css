@@ -1,0 +1,136 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgba(239, 130, 201, 0.804);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #f1f3fc;
+  color: rgb(239, 130, 201, 0.804);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #f1f3fc;
+  color: rgb(239, 130, 201, 0.804);
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* When the screen is less than 800 pixels wide */
+@media screen and (max-width: 800px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+
+  /* Show the icon that should open and close the topnav */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* -------------------------------
+   🎥 VIDEO + BUTTON STYLES
+-------------------------------- */
+
+/* Style the video (smaller, centered) */
+#myVideo {
+  width: 50%;     /* or try 300px, 400px, etc. */
+  height: auto;   /* keeps aspect ratio */
+  border-radius: 10px; /* optional: smooth edges */
+  display: block;
+  margin: 0 auto; /* centers the video */
+}
+
+/* Style the content section below the video */
+.content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 700px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.image-container {
+  background-image: url("../img/Oseti.jpg"); /* The image used - important! */
+  background-size: cover;
+  position: relative; /* Needed to position the cutout text in the middle of the image */
+  height: 950px; /* Some height */
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 10vw; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 50%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
